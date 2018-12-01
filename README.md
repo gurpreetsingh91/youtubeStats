@@ -18,4 +18,6 @@ Following features can be exploited :
 
 8. Most liked & Disliked Videos
 
-9. 
+9. Which channel gets its videos trending quickly
+
+10. Which channels took more than an year to make their videos as trending
