@@ -42,6 +42,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
+    "<<<<<<< LOCAL CELL DELETED >>>>>>>\n",
     "# Importing libraries\n",
     "import pandas as pd\n",
     "import numpy as np\n",
@@ -53,7 +54,9 @@
     "from collections import Counter\n",
     "import datetime\n",
     "import wordcloud\n",
-    "import json"
+    "import json\n",
+    "from wordcloud import WordCloud, STOPWORDS\n",
+    "import seaborn as sns"
    ]
   },
   {
@@ -61,6 +64,20 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<<<<<<< local\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "=======\n"
+     ]
+    },
     {
      "data": {
       "text/html": [
@@ -256,6 +273,20 @@
      "output_type": "execute_result"
     },
     {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      ">>>>>>> remote\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<<<<<<< local <modified: text/html, text/plain>\n"
+     ]
+    },
+    {
      "data": {
       "text/html": [
        "<div>\n",
@@ -292,6 +323,7 @@
        "      <th>ratings_disabled</th>\n",
        "      <th>video_error_or_removed</th>\n",
        "      <th>description</th>\n",
+       "      <th>country</th>\n",
        "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
@@ -313,6 +345,7 @@
        "      <td>False</td>\n",
        "      <td>False</td>\n",
        "      <td>SHANTELL'S CHANNEL - https://www.youtube.com/s...</td>\n",
+       "      <td>us</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1</th>\n",
@@ -332,6 +365,7 @@
        "      <td>False</td>\n",
        "      <td>False</td>\n",
        "      <td>One year after the presidential election, John...</td>\n",
+       "      <td>us</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
@@ -351,6 +385,7 @@
        "      <td>False</td>\n",
        "      <td>False</td>\n",
        "      <td>WATCH MY PREVIOUS VIDEO ▶ \\n\\nSUBSCRIBE ► http...</td>\n",
+       "      <td>us</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>3</th>\n",
@@ -370,6 +405,7 @@
        "      <td>False</td>\n",
        "      <td>False</td>\n",
        "      <td>Today we find out if Link is a Nickelback amat...</td>\n",
+       "      <td>us</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>4</th>\n",
@@ -389,6 +425,7 @@
        "      <td>False</td>\n",
        "      <td>False</td>\n",
        "      <td>I know it's been a while since we did this sho...</td>\n",
+       "      <td>us</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -437,28 +474,57 @@
        "3              False             False                   False   \n",
        "4              False             False                   False   \n",
        "\n",
-       "                                         description  \n",
-       "0  SHANTELL'S CHANNEL - https://www.youtube.com/s...  \n",
-       "1  One year after the presidential election, John...  \n",
-       "2  WATCH MY PREVIOUS VIDEO ▶ \\n\\nSUBSCRIBE ► http...  \n",
-       "3  Today we find out if Link is a Nickelback amat...  \n",
-       "4  I know it's been a while since we did this sho...  "
+       "                                         description country  \n",
+       "0  SHANTELL'S CHANNEL - https://www.youtube.com/s...      us  \n",
+       "1  One year after the presidential election, John...      us  \n",
+       "2  WATCH MY PREVIOUS VIDEO ▶ \\n\\nSUBSCRIBE ► http...      us  \n",
+       "3  Today we find out if Link is a Nickelback amat...      us  \n",
+       "4  I know it's been a while since we did this sho...      us  "
       ]
      },
-     "execution_count": 5,
+     "execution_count": 139,
      "metadata": {},
      "output_type": "execute_result"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "=======\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      ">>>>>>> remote <removed>\n"
+     ]
     }
    ],
    "source": [
+    "<<<<<<< local\n",
     "us_vids = pd.read_csv('data/USvideos.csv')\n",
     "in_vids = pd.read_csv('data/INvideos.csv')\n",
     "ca_vids = pd.read_csv('data/CAvideos.csv')\n",
     "gb_vids = pd.read_csv('data/GBvideos.csv')\n",
-    "us_reviews = us_vids\n",
     "# View sample\n",
+    "us_reviews.head()\n",
+    "=======\n",
+    "us_reviews = pd.read_csv('data/USvideos.csv')\n",
+    "in_reviews = pd.read_csv('data/INvideos.csv')\n",
+    "ca_reviews = pd.read_csv('data/CAvideos.csv')\n",
+    "gb_reviews = pd.read_csv('data/GBvideos.csv')\n",
+    "# Viewing the data\n",
     "#us_reviews.head()\n",
-    "in_reviews.head()"
+    "in_reviews.head()\n",
+    ">>>>>>> remote"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<span style=\"color:red\">**<<<<<<< local**</span>"
    ]
   },
   {
@@ -3155,6 +3221,13 @@
    ],
    "source": [
     "print(len(all_vids[all_vids['channel_title'] ==  'WWE']))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<span style=\"color:red\">**=======**</span>"
    ]
   },
   {
@@ -9267,6 +9340,13 @@
    "metadata": {},
    "outputs": [],
    "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<span style=\"color:red\">**>>>>>>> remote**</span>"
+   ]
   }
  ],
  "metadata": {
